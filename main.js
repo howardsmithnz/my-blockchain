@@ -46,8 +46,8 @@ class Blockchain{
                 return false;
             }
 
-            return true;
         }
+        return true;
     }
 }
 
@@ -56,5 +56,11 @@ kadaCoin.addBlock(new Block(1,"28/12/2017", { amount: 4 }));
 kadaCoin.addBlock(new Block(2,"29/12/2017", { amount: 10 }));
 
 console.log("Is blockchain valid?", kadaCoin.isChainValid());
+
+kadaCoin.chain[1].data = { amount: 100 };
+kadaCoin.chain[1].hash = kadaCoin.chain[1].calculateHash();
+
+console.log("Is blockchain valid?", kadaCoin.isChainValid());
+
 
 //console.log(JSON.stringify(kadaCoin, null, 4));
