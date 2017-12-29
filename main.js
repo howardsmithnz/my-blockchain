@@ -36,6 +36,6 @@ class Blockchain{
 
 let kadaCoin = new Blockchain();
 kadaCoin.addBlock(new Block(1,"28/12/2017", { amount: 4 }));
-kadaCoin.addBlock(new Block(1,"29/12/2017", { amount: 10 }));
+kadaCoin.addBlock(new Block(2,"29/12/2017", { amount: 10 }));
 
 console.log(JSON.stringify(kadaCoin, null, 4));
